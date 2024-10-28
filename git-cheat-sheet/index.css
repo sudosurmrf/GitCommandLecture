@@ -54,7 +54,7 @@ button:hover {
 }
 
 body {
-  padding-top: 250px; /* Space for the fixed terminal section */
+  padding-top: 250px; 
 }
 * {
   margin: 0;
@@ -68,8 +68,6 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
-/* Header Styling */
 header {
   text-align: center;
   padding: 40px;
@@ -90,7 +88,6 @@ header p {
   color: #dcdcdc;
 }
 
-/* Section Styling */
 .git-section {
   margin: 20px;
   padding: 30px;
@@ -129,7 +126,6 @@ header p {
   z-index: 1;
 }
 
-/* Command Styling */
 .command {
   margin-top: 15px;
 }
@@ -161,7 +157,6 @@ header p {
   position: relative;
 }
 
-/* Responsive Design */
 @media (min-width: 600px) {
   .git-section {
     max-width: 80%;

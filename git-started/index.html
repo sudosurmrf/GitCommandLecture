@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Git Lesson</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Interactive Git Lesson</h1>
+  <div id="instructions">
+    <h2>Instructions</h2>
+    <p id="instructionText">Welcome! Start by initializing your Git repository with the correct command.</p>
+  </div>
+
+  <div id="terminal">
+    <h2>Terminal</h2>
+    <div id="output"></div>
+    <div id="input-section">
+      <input type="text" id="commandInput" placeholder="Enter Git command here" autofocus>
+      <button onclick="executeCommand()">Run Command</button>
+      <div id="cheatSheet">
+        <h3>Git Command Cheat Sheet</h3>
+        <div class="table">
+          <div class="row"><span>Initialize Repository</span> <code>git init</code></div>
+          <div class="row"><span>Add Files</span> <code>git add .</code> or <code>git add --all</code></div>
+          <div class="row"><span>Commit Changes</span> <code>git commit -m "message"</code></div>
+          <div class="row"><span>Create Branch</span> <code>git branch feature</code> or <code>git checkout -b feature</code></div>
+          <div class="row"><span>Merge Branch</span> <code>git merge feature</code></div>
+          <div class="row"><span>Push to GitHub</span> <code>git push -u origin main</code></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="progress">
+    <h2>Progress</h2>
+    <ul>
+      <li id="step1" class="step">Initialize Repository</li>
+      <li id="step2" class="step">Add Files</li>
+      <li id="step3" class="step">Commit Changes</li>
+      <li id="step4" class="step">Create Branch</li>
+      <li id="step5" class="step">Merge Branch</li>
+      <li id="step6" class="step">Push to GitHub</li>
+    </ul>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
