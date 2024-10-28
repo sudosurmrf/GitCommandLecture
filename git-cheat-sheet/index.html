@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Cheatsheet</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="./index.js"></script>
+</head>
+<body>
+ 
+  <section class="terminal-section">
+    <div class="input-container">
+      <label for="command-input">Git Command:</label>
+      <input type="text" id="command-input" placeholder="Type a Git command here..." autofocus>
+      <button onclick="runCommand()">Run</button>
+    </div>
+    <div id="terminal">
+      <div id="terminal-output">Welcome to the Git Cheatsheet Terminal. Type a command to get started!</div>
+    </div>
+  </section>
+
+  <header>
+    <h1>Git Cheatsheet</h1>
+    <p>A quick reference to essential Git commands and workflows.</p>
+  </header>
+
+  <section class="git-section">
+    <h2>Setup</h2>
+    <div class="command">
+      <span class="command-name">git config --global user.name "Your Name"</span>
+      <p>Sets the name you want attached to your commits.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git config --global user.email "you@example.com"</span>
+      <p>Sets the email you want attached to your commits.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git init</span>
+      <p>Initializes a new Git repository in your current directory.</p>
+    </div>
+  </section>
+
+  <section class="git-section">
+    <h2>Basic Commands</h2>
+    <div class="command">
+      <span class="command-name">git status</span>
+      <p>Shows the status of your current directory and tracked files.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git add .</span>
+      <p>Stages all changes in the current directory for the next commit.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git commit -m "message"</span>
+      <p>Commits the staged changes with a message describing the commit.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git log</span>
+      <p>Shows the commit history for the repository.</p>
+    </div>
+  </section>
+
+  <section class="git-section">
+    <h2>Branching</h2>
+    <div class="command">
+      <span class="command-name">git branch</span>
+      <p>Lists all branches in your repository.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git branch branch_name</span>
+      <p>Creates a new branch with the specified name.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git checkout branch_name</span>
+      <p>Switches to the specified branch.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git merge branch_name</span>
+      <p>Merges the specified branch into the current branch.</p>
+    </div>
+  </section>
+
+  <section class="git-section">
+    <h2>Undo Commands</h2>
+    <div class="command">
+      <span class="command-name">git reset --soft HEAD~1</span>
+      <p>Moves the last commit to the staging area without deleting changes.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git reset --hard HEAD~1</span>
+      <p>Completely removes the last commit and discards changes.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git revert commit_hash</span>
+      <p>Reverts a specific commit without rewriting history.</p>
+    </div>
+  </section>
+
+  <section class="git-section">
+    <h2>Fixing Merge Conflicts</h2>
+    <div class="command">
+      <span class="command-name">git merge branch_name</span>
+      <p>Attempts to merge branch; if conflicts, manual conflict resolution is needed.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git status</span>
+      <p>Shows files with conflicts after a failed merge attempt.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git add conflicted_file</span>
+      <p>Stages resolved conflicts in the specified file.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git merge --abort</span>
+      <p>Aborts the merge and restores the previous state.</p>
+    </div>
+  </section>
+
+  <section class="git-section">
+    <h2>Stashing</h2>
+    <div class="command">
+      <span class="command-name">git stash</span>
+      <p>Temporarily stores changes in a "stash" to work on later.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git stash list</span>
+      <p>Lists all stashes available.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git stash apply</span>
+      <p>Applies the most recent stash and keeps it in the stash list.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git stash pop</span>
+      <p>Applies the most recent stash and removes it from the stash list.</p>
+    </div>
+  </section>
+
+  <section class="git-section">
+    <h2>Collaboration</h2>
+    <div class="command">
+      <span class="command-name">git remote add origin URL</span>
+      <p>Links the repository to a remote server.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git push -u origin branch_name</span>
+      <p>Pushes commits to the remote repository and sets upstream tracking.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git pull</span>
+      <p>Fetches changes from the remote repository and merges them into the current branch.</p>
+    </div>
+    <div class="command">
+      <span class="command-name">git clone URL</span>
+      <p>Creates a copy of a repository from a remote URL.</p>
+    </div>
+  </section>
+</body>
+</html>
