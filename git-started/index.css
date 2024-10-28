@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  background-attachment: fixed;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  max-width: 90%;
+}
+
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+#instructions, #terminal, #progress {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px 0;
+  z-index: 2;
+}
+
+#instructions h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+#instructionText {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+#terminal {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 40%;
+}
+
+#output {
+  width: 100%;
+  min-height: 120px;
+  background-color: #1e293b;
+  color: #cbd5e1;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #374151;
+}
+
+#input-section {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+#commandInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+#cheatSheet {
+  margin-left: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+#cheatSheet h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.table {
+  border-top: 1px solid #e5e7eb;
+  font-family: 'Courier New', monospace;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.row span {
+  color: #374151;
+}
+
+.row code {
+  color: #2563eb;
+}
+
+#progress h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+#progress ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.step {
+  font-size: 1rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.step:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.step.completed {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.step.completed:before {
+  background-color: #10b981;
+}
