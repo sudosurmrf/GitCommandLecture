@@ -1,12 +1,29 @@
+import { Terminal } from '@xterm/xterm';
+// const { Terminal } = require('@xterm/xterm');
+
+
+const terminal = new Terminal();
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const terminalOutput = document.getElementById("terminal-output");
   const commandInput = document.getElementById("command-input");
   const runButton = document.getElementById("run");
-  runButton.addEventListener("click", () => {
-    runCommand();
-  });
+  // runButton.addEventListener("click", () => {
+  //   runCommand();
+  // });
 
+  const terminalContainer = document.getElementById('terminal-container');
+  terminal.open(terminalContainer);
+
+
+  terminal.setOption('cursorBlink', true);
+  terminal.write('Welcome to the terminal!\r\n');
+
+ 
+  terminal.onData(data => {
+    console.log(`User entered: ${data}`);
+});
   
   const commandDescriptions = {
     // Setup Commands

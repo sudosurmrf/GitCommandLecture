@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "@xterm/xterm": "^5.5.0"
+    "@xterm/xterm": "^5.5.0",
+    "http-server": "^14.1.1"
   },
   "name": "git-lecture",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,4 +14,3 @@
   "author": "",
   "license": "ISC"
 }
-2

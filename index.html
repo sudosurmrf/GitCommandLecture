@@ -4,11 +4,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Git Cheatsheet</title>
   <link rel="stylesheet" href="index.css">
-  <script src="./index.js"></script>
+  <link rel="stylesheet" href="./node_modules/@xterm/xterm/css/xterm.css" />
+  <script  src="./node_modules/@xterm/xterm/lib/xterm.js"></script>
+  <script type="module" src="./index.js"></script>
 </head>
 <body>
+
+  <div id="terminal"></div>
  
-  <section class="terminal-section">
+  <!-- <section class="terminal-section">
     <div class="input-container">
       <label for="command-input">Git Command:</label>
       <input type="text" id="command-input" placeholder="Type a Git command here..." autofocus>
@@ -17,7 +21,7 @@
     <div id="terminal">
       <div id="terminal-output">Welcome to the Git Cheatsheet Terminal. Type a command to get started!</div>
     </div>
-  </section>
+  </section> -->
 
   <header>
     <h1>Git Cheatsheet</h1>
