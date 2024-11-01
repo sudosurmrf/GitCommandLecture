@@ -1,12 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const terminalOutput = document.getElementById("terminal-output");
-  const commandInput = document.getElementById("command-input");
-  const runButton = document.getElementById("run");
-  runButton.addEventListener("click", () => {
-    runCommand();
-  });
-
   
   const commandDescriptions = {
     // Setup Commands
@@ -51,37 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   
   
-  const runCommand = () => {
-    const command = commandInput.value.trim();
-    if (command) {
-      displayCommandOutput(command);
-    } else {
-      terminalOutput.innerHTML += "\n> Please enter a command.\n";
-    }
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
   }
   
-  const handleCommandClick = (command) => {
-    commandInput.value = command;
-    // displayCommandOutput(command); //uncomment this if you want the commands to instant run
-  }
-  
-  const displayCommandOutput = (command) => {
-    const trimmedCommand = command.trim();
-    const baseCommand = trimmedCommand.split(" ")[0];
-    
-    let output = commandDescriptions[trimmedCommand];
-    if (!output) {
-      output = commandDescriptions[baseCommand];
-    }
-    if (!output) {
-      output = "Command not found.";
-    }
-    terminalOutput.innerHTML += `\n> ${command}\n${output}\n`;
-    terminalOutput.scrollTop = terminalOutput.scrollHeight;
-    commandInput.value = "";
-  }
   document.querySelectorAll(".command-name").forEach((element) => {
-    element.addEventListener("click", () => handleCommandClick(element.textContent));
+    element.addEventListener("click", () => copyToClipboard(element.textContent));
   });
   
 });
